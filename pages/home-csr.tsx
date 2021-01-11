@@ -8,7 +8,6 @@ const Home3 = () => {
   const fetchPosts = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`)
     const posts: Post[] = await res.json()
-    console.log('posts', posts)
     setPosts(posts)
   }
 
