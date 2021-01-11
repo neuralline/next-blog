@@ -8,14 +8,13 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
       <Head>
-        <title>e-commerce</title>
+        <title>Mini-Blog</title>
       </Head>
 
-      <h1>Welcome to SSG HomePage</h1>
-      <h2>Blog</h2>
+      <h1>Welcome to my Mini-Blog</h1>
       <h2>Latest Posts</h2>
 
-      <ul>
+      <ul className="blog-container">
         {props.posts.map((post: Post) => {
           return (
             <li key={post.id}>
@@ -26,8 +25,9 @@ const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           )
         })}
       </ul>
+
       <Link href="/create-post">
-        <a>create post</a>
+        <button>create post</button>
       </Link>
     </Layout>
   )

@@ -10,7 +10,7 @@ interface Values {
 
 const CreatePost = () => {
   const [title, setTitle] = useState<string>('')
-  const [content, setContent] = useState<string>()
+  const [content, setContent] = useState<string>('')
   const [status, setStatus] = useState<string>('createPost')
   const router = useRouter()
   const handleSubmit = async (e: any) => {
@@ -40,7 +40,7 @@ const CreatePost = () => {
       </Head>
       <h1>{status}</h1>
       <form onSubmit={e => handleSubmit(e)}>
-        <div>
+        <div className="blog-form">
           <label htmlFor="">Title</label>
           <input
             value={title}
@@ -48,8 +48,7 @@ const CreatePost = () => {
             type="text"
             name="title"
           />
-        </div>
-        <div>
+
           <label htmlFor="">Content</label>
           <textarea
             value={content}
@@ -57,8 +56,9 @@ const CreatePost = () => {
             name="content"
             id="textarea"
           ></textarea>
+
+          <button type="submit">Submit</button>
         </div>
-        <button type="submit">Submit</button>
       </form>
     </Layout>
   )

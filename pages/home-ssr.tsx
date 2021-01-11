@@ -13,11 +13,10 @@ const Home2 = (
         <title>Server Side Rendering</title>
       </Head>
 
-      <h1>Welcome to SSR HomePage</h1>
-      <h2>Blog</h2>
+      <h1>Welcome to My Mini-Blog</h1>
       <h2>Latest Posts</h2>
 
-      <ul>
+      <ul className="blog-container">
         {props.posts.map((post: Post) => {
           return (
             <li key={post.id}>

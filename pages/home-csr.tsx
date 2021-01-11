@@ -26,7 +26,7 @@ const Home3 = () => {
       <h2>Blog</h2>
       <h2>Latest Posts</h2>
 
-      <ul>
+      <ul className="blog-container">
         {!posts.length ? (
           <li>Loading...</li>
         ) : (
@@ -41,9 +41,6 @@ const Home3 = () => {
           })
         )}
       </ul>
-      <Link href="/create-post">
-        <a>create post</a>
-      </Link>
     </Layout>
   )
 }

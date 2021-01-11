@@ -6,6 +6,11 @@ const Menu = () => {
     <ul className={MenuCSS.menu}>
       <li>
         <Link href="/">
+          <a>Mini-Blog</a>
+        </Link>
+      </li>{' '}
+      <li>
+        <Link href="/">
           <a>SSG</a>
         </Link>
       </li>

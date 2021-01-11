@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import LayoutCSS from './Layout.module.scss'
 import Menu from './Menu'
 

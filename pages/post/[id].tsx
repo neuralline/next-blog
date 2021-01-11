@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import React from 'react'
 import Layout from '../../components/Layout'
 import { getAllPosts, getPostById } from '../../lib/db'
@@ -12,8 +13,13 @@ const SinglePost = ({
       <Head>
         <title>{post.title}</title>
       </Head>
-      <h1>{post.title}</h1>
-      <div>{post.content}</div>
+      <main>
+        <h1>{post.title}</h1>
+        <div className="blog-post">{post.content}</div>
+        <Link href="/">
+          <button>Home</button>
+        </Link>
+      </main>
     </Layout>
   )
 }

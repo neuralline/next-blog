@@ -1,3 +1,15 @@
+:root {
+  --text-color: #262727;
+  --text-link: #8bc34a;
+  --transparent: rgba(139, 195, 74, 0.1);
+  --text-light: #ffffff;
+  --background: #0d1117;
+}
+
+$padding: 1rem;
+$margin-bottom: 0.6rem;
+$border: 1px solid #ccc;
+$hover: green;
 html,
 body {
   padding: 0;
@@ -6,11 +18,79 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: -moz-scrollbars-none;
 }
 
-* {
+*,
+:before,
+:after {
   box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--text-link);
+}
+a:hover {
+  color: green;
+}
+h1 {
+  font-size: 1.9rem;
+}
+button {
+  background: var(--text-link);
+  text-align: center;
+  color: var(--text-light);
+  min-width: 100px;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  padding: 10px 1rem;
+}
+button:hover {
+  background-color: green;
+}
+input {
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+.blog-container {
+  padding: $padding;
+  li {
+    cursor: pointer;
+    margin-bottom: $margin-bottom;
+    :hover {
+      color: $hover;
+    }
+  }
+}
+
+.blog-post {
+  padding: $padding;
+}
+
+.blog-form {
+  display: grid;
+  gap: $padding;
+  grid-template-columns: 1fr;
+  padding: $padding;
+}
+main {
+  padding: $padding;
 }
